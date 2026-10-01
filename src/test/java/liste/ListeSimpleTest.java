@@ -45,11 +45,12 @@ public class ListeSimpleTest {
 
     @Test
     public void toStringDonneTousLesNoeuds() {
-        System.out.println(listeATester);
+        //System.out.println(listeATester);
         listeATester.ajout(1);
         listeATester.ajout(2);
         listeATester.ajout(3);
-        System.out.println(listeATester);
+        // System.out.println(listeATester);
+        assertEquals(listeATester.toString(), "ListeSimple(Noeud(3), Noeud(2), Noeud(1))");
     }
 
     @Test
