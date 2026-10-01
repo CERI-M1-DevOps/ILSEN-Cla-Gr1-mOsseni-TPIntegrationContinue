@@ -1,0 +1,7 @@
+export GITHUB_REPOSITORY="CERI-M1-DevOps/ILSEN-Cla-Gr1-mOsseni-TPIntegrationContinue"
+
+mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=$(echo ${{ github.CERI-M1-DevOps/ILSEN-Cla-Gr1-mOsseni-TPIntegrationContinue }} | sed 's-/-_-')
+
+mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=$(echo $GITHUB_REPOSITORY | sed 's-/-_-')
+
+mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=$(echo $GITHUB_REPOSITORY | sed 's-/-_-') -Dsonar.organization="ceri-m1-devops"
